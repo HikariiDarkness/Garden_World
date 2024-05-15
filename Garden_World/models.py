@@ -64,7 +64,7 @@ class Crop(models.Model):
     TYPE = Choices(
         ('vegetables', _('Hortalizas')),
         ('flowers', _('Flores')),
-        ('shadow', _('Sombra')),
+        ('aromatics', _('Aromaticas')),
     )
     type = models.CharField(
         max_length=10,

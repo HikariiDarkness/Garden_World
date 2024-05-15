@@ -1,25 +1,26 @@
 {% extends 'Garden_World/base.html' %}
-{% load static %}
 {% block title %}Inicio{% endblock %}
 {% block content %}
 
 <div class="container-sm text-center py-5 my-5">
-    <h1 class="display-3">Bienvenido a Garden World</h1>
-
-    <p class="lead">Aquí puedes llevar un registro de todos
-        los cultivos plantados en tu huerto.</p>
-
-    <hr class="my-4">
-
-    <p>¿Tienes una cuenta?</p>
-
-    <div class="d-flex justify-content-center">
-        <a href="" class="btn btn-primary mx-2">Iniciar sesión</a>
-        <a href="" class="btn btn-secondary mx-2">Registrarse</a>
-    </div>
-    <div class="d-flex justify-content-center">
-        <img src="{% static 'img/huerto.jpg' %}" alt="Huerto">
-    </div>
+    <div class="container my-5">
+        <div class="difuminar p-5 text-center rounded-3">
+          <h1 class="index text-body-emphasis">Bienvenido a Garden World</h1>
+          <p class="index col-lg-8 mx-auto fs-5">
+            Aquí puedes llevar un registro de todos los cultivos plantados en tu huerto.
+          </p>
+          <hr class="my-4">
+          <h3 class="index">¿Tienes una cuenta?</h3>
+          <div class="d-inline-flex gap-2 mb-5">
+            <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                <a class="active" href="{% url 'Garden_World:login' %}">Iniciar sesión</a>
+            </button>
+            <button class="index btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+                <a class="active" href="{% url 'Garden_World:register' %}">Registrarse</a>
+            </button>
+          </div>
+        </div>
+      </div>
 </div>
 
 {% endblock %}

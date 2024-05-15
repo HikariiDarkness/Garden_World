@@ -1,3 +1,21 @@
-h1{
-    color: red;
+.fondo{
+    height: fit-content;
+    background-image: url(../img/huerto2.jpg);
+    background-repeat: no-repeat;
+    background-position: 10% 10%;
+    background-attachment: fixed;
+    background-size: cover;
 }
+.difuminar{
+    background:rgba(224, 224, 235, 0.85); 
+   }
+
+.index{
+    color: black;
+    font-weight: bold;
+}
+.active {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
