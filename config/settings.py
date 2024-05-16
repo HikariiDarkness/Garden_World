@@ -134,4 +134,5 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_REDIRECT_URL = 'Garden_World:homesite'
-LOGOUT_REDIRECT_URL = 'Garden_World:homesite'
+LOGOUT_REDIRECT_URL = 'Garden_World:index'
+LOGIN_URL = 'Garden_World:login'

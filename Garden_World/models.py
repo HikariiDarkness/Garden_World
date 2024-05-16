@@ -74,4 +74,8 @@ class Crop(models.Model):
 
 
     class Meta:
+        verbose_name = 'crop'
         verbose_name_plural = 'crops'
+
+    def __str__(self):
+        return f"Nombre: {self.title}, {self.image}"

@@ -1,6 +1,8 @@
 from django import forms
+from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from Garden_World.models import Crop
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
@@ -11,3 +13,8 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
         help_texts = {k:"" for k in fields}
+
+class formCrop(ModelForm):
+    class Meta:
+        model = Crop
+        fields = '__all__'

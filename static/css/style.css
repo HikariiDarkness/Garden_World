@@ -19,3 +19,16 @@
     color: black;
     text-decoration: none;
   }
+
+.home{
+    background-color: beige;
+  }
+
+.registro{
+  height: fit-content;
+  background-image: url(../img/registro_cultivo.jpg);
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
+  background-attachment: fixed;
+  background-size: cover;
+}

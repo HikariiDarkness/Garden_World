@@ -9,6 +9,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('register/', views.register, name='register'),
     path('homesite/', views.homesite, name='homesite'),
+    path('new_crop/', views.new_crop, name='new_crop'),
     path('login/', LoginView.as_view(template_name='Garden_World/login.html'), name='login'),
-    path('logout/', LogoutView.as_view(template_name='Garden_World/logout.html'), name='logout')
+    path('logout/', LogoutView.as_view(template_name='Garden_World/logout.html'), name='logout'),
 ] 
