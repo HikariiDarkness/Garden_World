@@ -11,6 +11,16 @@
 </head>
 
 <body class="fondo">
+    {% if messages %}
+    <div class="notification text-light">
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% endif %}
     <div>
         {% block content %}
         {% endblock %}

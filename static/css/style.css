@@ -32,3 +32,50 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
+.crop-imagen{
+  height: 400px;
+  width: 600px;
+}
+
+.begginer {
+  border: 5px solid lightgreen;
+}
+.medium {
+  border: 5px solid yellow;
+}
+.hard {
+  border: 5px solid red;
+}
+
+.notification{
+  background-color: green;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item{
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+  flex-grow: 0;
+  flex-wrap: 0;
+  flex-basis: 600px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 1200px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}

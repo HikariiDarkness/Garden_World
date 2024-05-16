@@ -72,7 +72,6 @@ class Crop(models.Model):
         default=TYPE.vegetables,
     )
 
-
     class Meta:
         verbose_name = 'crop'
         verbose_name_plural = 'crops'

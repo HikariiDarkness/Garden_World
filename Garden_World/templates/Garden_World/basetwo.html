@@ -21,7 +21,7 @@
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="{% url 'Garden_World:homesite' %}" class="text-light nav-link px-2">Home</a></li>
             <li><a href="{% url 'Garden_World:new_crop' %}" class="text-light nav-link px-2">Registrar cultivo</a></li>
-            <li><a href="#" class="text-light nav-link px-2">Lista de cultivos</a></li>
+            <li><a href="{% url 'Garden_World:crop_list' %}" class="text-light nav-link px-2">Lista de cultivos</a></li>
         </ul>
 
         <div class="col-md-3 text-end mx-4">
@@ -31,12 +31,15 @@
         </div>
     </header>
 
-    {% if messagess %}
-    {% for message in messages %}
-    <div class="notificacion {{ message.tags }}">
-        {{ message }}
+    {% if messages %}
+    <div class="notification text-light">
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
     </div>
-    {% endfor %}
+
     {% endif %}
 
     <div>

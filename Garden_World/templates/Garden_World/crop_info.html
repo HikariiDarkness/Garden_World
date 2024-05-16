@@ -1,0 +1,38 @@
+{% extends 'Garden_World/basetwo.html' %}
+{% load static %}
+{% block title %}Lista de cultivos{% endblock %}
+{% block content %}
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="difuminar row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{{ crop.image.url }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+                height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">{{ crop.title }}</h1>
+            <p class="lead">{{ crop.description }}</p>
+            <p>Dificultad: {{ crop.get_dificulty_display }}</p>
+            {% if crop.get_dificulty_display == 'Principiante' %}
+            <div class="begginer">
+            </div>
+            {% elif crop.get_dificulty_display == 'Medio' %}
+            <div class="medium">
+            </div>
+            {% elif crop.get_dificulty_display == 'Dificil' %}
+            <div class="hard">
+            </div>
+            {% endif %}
+            <hr>
+            <p class="lead">Cantidad plantadas: {{ crop.quantity }}</p>
+            <p class="lead">Tipo: {{ crop.get_type_display }}</p>
+            <p class="lead">Tipo de clima: {{ crop.get_weather_display }}</p>
+            <p class="lead">Temporada: {{ crop.get_season_display }}</p>
+            <p class="lead">Tipo de iluminación: {{ crop.get_illumination_display }}</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-sm px-4 me-md-2"><a class="active text-light"
+                        href="{% url 'Garden_World:crop_list' %}">Regresar a la lista</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

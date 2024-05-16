@@ -3,18 +3,17 @@
 {% block title %}Nuevo cultivo{% endblock %}
 {% block content %}
 
-<div class="container-sm text-left py-5 my-5">
-    <div class="container my-5">
-        <div class="p-5 rounded-3">
-            <div class="card-body">
-                <div class="container">
-                    <div class="row">
-                    
-                      <div class="difuminar col text-center rounded-3">
+
+<div class="container my-5">
+    <div class="p-5 rounded-3">
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="difuminar col text-center rounded-3">
                         <div class="col text-center rounded-3 py-3">
                             <h1 class="index text-center text-body-emphasis">Registrar nuevo cultivo</h1>
                         </div>
-                        <form class="form" method="post">
+                        <form class="form" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             <div class="form-group ">
                                 <label class="sr-only fs-6" for="form-first-name">Nombre del cultivo:</label>
@@ -74,15 +73,14 @@
                                 <button type="submit" id="submit">Guardar datos</button>
                             </div>
                         </form>
-                      </div>
-                      <div class="col">
-                        <img class="registro" src="{% static 'img/registro_cultivo.jpg' %}" alt="">
-                      </div>
                     </div>
-                  </div>
-                
+                    <div class="col">
+                        <img class="registro" src="{% static 'img/registro_cultivo.jpg' %}" alt="Granja caricatura">
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
+    </div>
 </div>
+
 {% endblock %}
